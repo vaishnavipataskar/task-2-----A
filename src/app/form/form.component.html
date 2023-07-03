@@ -1,0 +1,26 @@
+<form>
+        <div class="form-group col-8">
+            <label for="inputEmail4">First Name</label>
+            <input type="text" class="form-control" id="inputEmail4" placeholder="first name" required>
+          </div>
+          <div class="form-group col-8">
+            <label for="inputEmail4">Last Name</label>
+            <input type="text" class="form-control" id="inputEmail4" placeholder="last name" required>
+          </div>           
+      <div class="form-group col-8">
+        <label for="inputState">How should we contact you?</label>
+        <select class="select" (change)='myFunction($event)'>
+            <option value="selected">Choose option</option>
+            <option value="phone">Phone</option>
+            <option value="email">Email</option>        
+        </select>
+        <div class="form-group col-8" [class.d-none]="isHidden">
+            <label for="Contact">Phone</label>
+            <input type="text" class="form-control" id="Contact" value="phone" placeholder="Phone"  #ContactNum>
+        </div>        
+        <div class="form-group col-8" [class.d-none]="isHidden2">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" value="email" placeholder="Email" #ContactNum2>
+        </div>             
+    </div>      
+  </form>
